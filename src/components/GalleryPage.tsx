@@ -5,6 +5,7 @@ import { RouteComponentProps } from "react-router";
 import { GalleryImage, ImageProps } from "./GalleryImage";
 import { GalleryFooter, FooterProps } from "./GalleryFooter";
 import { Inventory, imageData } from "../images/Inventory";
+import { IoIosClose } from "react-icons/io";
 
 export interface GalleryProps {
   imageSet: ImageSets;
@@ -100,8 +101,14 @@ export class GalleryPage extends React.Component<RouteComponentProps<GalleryProp
       imagePath: `${GalleryConfig.imageStore}${this.imageSet}/${inventory[imageKey].fileName}.JPG`,
       idx: imageKey
     }
+    const closeAction = () => this.setModal(-1);
 
-    return <GalleryImage { ...imagePath}/>;
+    return (
+      <div className="gallery_modal">
+        <div onClick={closeAction}><IoIosClose /></div>
+        <GalleryImage { ...imagePath}/>
+      </div>
+    );
   }
 
 }
