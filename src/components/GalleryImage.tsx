@@ -3,12 +3,10 @@ import * as React from "react";
 export interface ImageProps {
   imagePath: string;
   idx: number;
-  key?: number;
   setModal?(key: number): void;
 }
 /* TODO: 
  * - if (setModel == !undefined) make mouse change on hover
- * - Clean up the props (idx and key)
 */
 export class GalleryImage extends React.PureComponent<ImageProps, {}> {
 

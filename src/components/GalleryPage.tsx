@@ -76,10 +76,9 @@ export class GalleryPage extends React.Component<RouteComponentProps<GalleryProp
       const imagePath: ImageProps = {
         imagePath: `${GalleryConfig.imageStore}${this.imageSet}/${inventory[idx].fileName}.JPG`,
         setModal: this.setModal,
-        idx,
-        key: idx
+        idx
       };
-      const item = <GalleryImage { ...imagePath } />
+      const item = <GalleryImage key={imagePath.imagePath} { ...imagePath } />
       images.push(item)
     }
     return images;
