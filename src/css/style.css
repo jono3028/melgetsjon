@@ -1,0 +1,16 @@
+/* Global style sheet*/
+
+body {
+  background-image: url("/src/images/BG_imageOne.JPG");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: 100% auto;
+  color: goldenrod;
+  font-family:  arial;
+  font-style: normal;;
+  font-size: 1.5em;
+  line-height: 1.0em;
+  padding: 0;
+  text-shadow: 1px 1px 1px #111111;
+}

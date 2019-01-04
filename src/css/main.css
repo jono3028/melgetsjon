@@ -1,0 +1,32 @@
+/* Styles for main.tsx */
+
+.main_container {
+  margin: 20% 10%;
+}
+
+.main_row1 > h1 {
+  font-size: 2.0em;
+  line-height: 1.25em;
+  padding: 0;
+  margin: 0;
+  text-shadow: 1px 1px 7px #111111;
+}
+
+.main_link {
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+  margin-bottom: 5px; 
+  padding: 5px;  
+  width: fit-content;
+  color: goldenrod;
+  text-decoration: none;
+  display: block;
+}
+
+.main_link:hover {
+  background-color: lightgray;
+}
+
+.main_link:visited {
+  color: goldenrod;
+}
