@@ -6,6 +6,7 @@ import { GalleryImage, ImageProps } from "./GalleryImage";
 import { GalleryFooter, FooterProps } from "./GalleryFooter";
 import { Inventory, imageData } from "../images/Inventory";
 import { IoIosClose } from "react-icons/io";
+import "../css/gallery.css";
 
 export interface GalleryProps {
   imageSet: ImageSets;
@@ -104,7 +105,7 @@ export class GalleryPage extends React.Component<RouteComponentProps<GalleryProp
 
     return (
       <div className="gallery_modal">
-        <div onClick={closeAction}><IoIosClose /></div>
+        <div className="modal_close" onClick={closeAction}><IoIosClose /></div>
         <GalleryImage { ...imagePath}/>
       </div>
     );
@@ -114,6 +115,5 @@ export class GalleryPage extends React.Component<RouteComponentProps<GalleryProp
 
 /**
  * TODO:
- * - flexbox
- * - styling
+ * - footer button styling
  */
