@@ -12,10 +12,11 @@ export class GalleryImage extends React.PureComponent<ImageProps, {}> {
 
   render() {
 
+    const onClick = (this.props.setModal == undefined) ? null : () => this.props.setModal(this.props.idx);
     const attrs = {
       src: this.props.imagePath,
       alt: this.props.imagePath,
-      onClick: () => this.props.setModal(this.props.idx)
+      onClick
     }
     return (
       <div className="image_container">
