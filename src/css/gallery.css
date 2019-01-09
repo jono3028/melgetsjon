@@ -42,7 +42,7 @@ section.gallery_container {
 }
 
 .gallery_modal .modal_close {
-  text-align: right;
+  text-align: right;                                              
   margin: auto;
   width: 80%;
   max-width: 700px;
@@ -52,4 +52,20 @@ section.gallery_container {
   margin: auto;
   width: 80%;
   max-width: 700px;
+}
+
+.gallery_nav button {
+  color: goldenrod;
+  text-shadow: 1px 1px 1px #111111;
+  background: transparent;
+  text-align: center;
+  border: none;
+  height: 35px;
+  vertical-align: middle;
+  font-size: 25px;
+}
+
+.gallery_nav button:first-of-type, button:last-of-type{
+  position: relative;
+  top: 3px;
 }

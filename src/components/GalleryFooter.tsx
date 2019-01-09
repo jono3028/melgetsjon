@@ -17,7 +17,7 @@ export class GalleryFooter extends React.PureComponent<FooterProps, {}> {
     const last = this.getBack();
     const next = this.getForward();
     return (
-      <div className="page_nav">
+      <div className="gallery_nav">
         <h5>{ last } { links } { next }</h5>
       </div>
     )
@@ -52,9 +52,11 @@ export class GalleryFooter extends React.PureComponent<FooterProps, {}> {
         onClick: () => this.setPage(idx),
         disabled: idx == this.props.currentPage
       };
-      const spacer = (idx == this.props.totalPages) ? "" : " | ";
-      const link = (<span key={idx}><button {...attrs}>{ idx }</button>{ spacer }</span>);
+      const link = (<button {...attrs}>{ idx }</button>);
       links.push(link);
+      if (idx !== this.props.totalPages) {
+        links.push(<span key={ idx * 100 }> | </span>)
+      }
     }
     return links;
   }
