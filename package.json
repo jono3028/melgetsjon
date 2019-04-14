@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development --hot",
-    "build": "webpack --mode development",
-    "prod": "webpack --mode production",
+    "server": "webpack-dev-server --mode development --hot",
+    "dev": "npm run server & npm run build",
+    "build": "webpack --mode development --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jon Owen",

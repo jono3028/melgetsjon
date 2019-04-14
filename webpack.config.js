@@ -4,21 +4,21 @@ module.exports = {
 	entry: {
 		main: "./src/index.tsx"
 	},
+	devtool: "inline-source-map",
 	resolve: {
 		alias: {
-			"~": path.resolve(__dirname, "src/")
+			"~": path.resolve(__dirname, "/src")
 		},
 		extensions: [".ts", ".tsx"]
 	},
 	output: {
 		filename: "[name].js",
-		path: path.join(__dirname, "dist"),
+		path: path.join(__dirname, "/dist"),
 	},
 	devServer: {
 		contentBase:  path.join(__dirname, "/"),
 		port: 9000
 	},
-	devtool: "source-map",
 	resolve: {
 		extensions: [".ts", ".tsx", ".js", ".json"]
 	},
