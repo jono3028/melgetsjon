@@ -105,7 +105,7 @@ export class GalleryPage extends React.Component<RouteComponentProps<GalleryProp
 
     return (
       <div className="gallery_modal">
-        <div className="modal_close" onClick={closeAction}><IoIosClose /></div>
+        <div className="modal_close" onClick={closeAction}> &times; </div>
         <GalleryImage { ...imagePath}/>
       </div>
     );

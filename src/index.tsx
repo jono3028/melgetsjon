@@ -6,9 +6,11 @@ import "./css/style.css";
 import { Main } from "./components/Main";
 import { GalleryPage } from "./components/GalleryPage";
 
+const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
+
 ReactDOM.render(
 	(
-		<Router>
+		<Router basename={baseUrl}>
 			<React.Fragment>
 				<Route exact path="/" component={Main}/>
 				<Route path="/gallery/:imageSet" component={GalleryPage} />
